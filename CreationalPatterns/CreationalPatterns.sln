@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreationalPatterns", "CreationalPatterns\CreationalPatterns.csproj", "{B8767489-A84D-4606-9DB4-1246D825762D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{1A29C983-F7EE-4F38-9FE0-47DA80A98B93}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory", "Factory\Factory.csproj", "{79F9C0D7-8A7B-400F-8382-3861D66888E3}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B8767489-A84D-4606-9DB4-1246D825762D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8767489-A84D-4606-9DB4-1246D825762D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8767489-A84D-4606-9DB4-1246D825762D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8767489-A84D-4606-9DB4-1246D825762D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A29C983-F7EE-4F38-9FE0-47DA80A98B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A29C983-F7EE-4F38-9FE0-47DA80A98B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A29C983-F7EE-4F38-9FE0-47DA80A98B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
