@@ -1,6 +1,8 @@
 ﻿using System;
 using Singleton.Models;
+using System.Threading;
 using System.Data.Entity;
+using System.Configuration;
 using System.Data.SqlClient;
 
 namespace Singleton
@@ -12,19 +14,19 @@ namespace Singleton
           public DbSet<Player> Players { get; set; }
           public DbSet<Team> Teams { get; set; }
 
-          private const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=SoccerContext;Integrated Security=True";
+          private static string connectionString = ConfigurationManager.ConnectionStrings["SoccerContext"].ConnectionString;
           
+          SqlConnection connection = new SqlConnection(connectionString);
+
           private static SoccerContext _soccerContext;
 
           private SoccerContext() 
           {
-               SqlConnection conn = new SqlConnection(connectionString);
-
                try
                {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Openning Connection ...");
-                    conn.Open();
+                    connection.Open();
                     Console.WriteLine("Connection succeeded!");
                     Console.ForegroundColor = ConsoleColor.White;
                }
@@ -50,6 +52,14 @@ namespace Singleton
 
                     return _soccerContext;
                }
+          }
+
+          ~SoccerContext()
+          {
+               connection.Close();
+               Console.ForegroundColor = ConsoleColor.Red;
+               Console.WriteLine("Connection closed!");
+               Thread.Sleep(500);
           }
 
      }

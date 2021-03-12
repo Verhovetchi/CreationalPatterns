@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
+using System.Configuration;
 
 namespace Singleton
 {
@@ -37,8 +39,24 @@ namespace Singleton
                     Console.WriteLine();
                }
 
-
+               Console.WriteLine();
                Console.ReadKey();
           }
      }
 }
+
+#region
+//string connectionString = "cldakslflsa";
+//ConnectionStringSettings connectionStringSettings =
+//  new ConnectionStringSettings("MyConnectionStringKey", connectionString);
+//ConfigurationManager.ConnectionStrings.Add(connectionStringSettings);
+//Console.WriteLine("end");
+#endregion
+
+
+//var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+//ConnectionStringSettings connectionString = new ConnectionStringSettings("SoccerDb", "dsafjkasd", "dsanfjad");
+//config.ConnectionStrings.ConnectionStrings.Add(connectionString);
+//config.Save(ConfigurationSaveMode.Modified);
+
+//ConfigurationManager.RefreshSection("connectionStrings");

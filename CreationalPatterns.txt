@@ -1,0 +1,39 @@
+Pattern este solutia de rezolvare a unei probleme.
+
+cel mai des, sabloanele se intalnesc in OOD(Object Oriented Design)
+
+OOD defineste diferite conditii:
+	abstractia, flexibilitatea, modularea
+
+Partile pattern-ului:
+	-pattern name
+	-problem	
+	-solution
+	-consequences
+
+Creational patterns - singleton, factory, builder, abstract factory, prototipe
+
+se utilizeaza cand:
+   avem nevoie de un singur obiect si un punct de acces la acest obiect bine definit
+   cand avem nevoie sa facem subclassing sau agregare intre diferite obiecte.
+
+diferenta dintre singleton si static class:
+	in singleton e posibila mostenirea
+	in s avem unul si dooar 1 static field instance
+	poate fi transmis ca parametru in ctor sau metode
+	putem controla ciclu de viata
+	putem serializa
+	poate fi initializati cu diferiti parametri
+
+diagrama: avem o instanta statica si o metoda care returneaza aceasta instanta
+consecinte: reduce namespace-ul, controleaza accesul la instanta, permite numar 
+		variabil de instante.
+
+lazy loading - atunci cand avem constructor static si in instance returnam doar 
+obiectul.problema este ca in clasa putem avea si alte metode statice iar de obiect
+sa nu avem nevoie in ciclu de viata a aplicatiei.
+
+penultima implementare este cu nested class
+ultima este cu Lazy(obiectul are o proprietate care indica daca e thread safe)
+
+Factory(separam responsabilitatile si suntem siguri ca obiectele sunt valide)
